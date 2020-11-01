@@ -7,13 +7,14 @@ from skimage import img_as_uint
 import sys
 from skimage import io, exposure, img_as_float, img_as_ubyte
 import warnings
+from tqdm import tqdm
 
 path = os.getcwd()
 paths = './gray'
 if not os.path.exists(paths):
 	os.mkdir(paths)
 
-for infile in glob.glob(path + "/*.jpg"):
+for infile in tqdm(glob.glob(path + "/*.jpg")):
 	img = io.imread(infile)
 	img = img_as_float(img)
 	imgL = exposure.adjust_gamma(img, 2.2) 
