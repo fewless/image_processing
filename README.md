@@ -1,4 +1,4 @@
-# image_processing
+# my program4yolo
 
 gray.py
 同じフォルダ内の画像をグレースケール化して、新規に作ったgrayフォルダにコピー
